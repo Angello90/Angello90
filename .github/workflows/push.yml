@@ -23,8 +23,6 @@ jobs:
       - name: Commit and push
         uses: EndBug/add-and-commit@v4
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-        with:
           author_name: yhassanige1
           author_email: yanny.hassani@universite-paris-saclay.fr
           force: false
