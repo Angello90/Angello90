@@ -1,0 +1,34 @@
+name: Git auto push
+on:
+  push:
+  workflow_dispatch:
+  scheldule:
+    - cron : '0 1 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Node js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      
+      - name: update README
+        run : |
+          node index.js
+      
+      - name: Commit and push
+        uses: EndBug/add-and-commit@v4
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          author_name: yhassanige1
+          author_email: yanny.hassani@universite-paris-saclay.fr
+          force: false
+          signoff: false
+          message: 'New README.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
