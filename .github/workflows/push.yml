@@ -29,4 +29,4 @@ jobs:
           signoff: false
           message: 'New README.md'
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
