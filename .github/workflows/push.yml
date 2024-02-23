@@ -2,7 +2,7 @@ name: Git auto push
 on:
   push:
   workflow_dispatch:
-  scheldule:
+  schedule:
     - cron : '0 1 * * *'
 jobs:
   build:
