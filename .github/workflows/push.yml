@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron : '36 1 * * *'
+    - cron : '42 1 * * *'
 jobs:
   update-readme:
     runs-on: ubuntu-latest
