@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron : '50 1 * * *'
+    - cron : '1 0 * * *'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
