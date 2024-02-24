@@ -3,27 +3,32 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron : '33 1 * * *'
+    - cron : '36 1 * * *'
 jobs:
-  build:
+  update-readme:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-      
-      - name: Set up Node js
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
-      
-      - name: update README
-        run : |
-          node index.js
-      
-      - name: Commit and push
+          node-version: ${{ matrix.node-version }}
+      - name: Update README.md file
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@users.noreply.github.com'
-          git add README.md
-          git commit -m "Update README"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
+          node index.js > README.md
+        env:
+          CI: true
+      - name: commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: yhassanige1
+          author_email: yanny.hassani@universite-paris-saclay.fr
+          force: false
+          signoff: false
+          message: 'add this hit'
+        env:
+          # This is necessary in order to push a commit to the repo
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
