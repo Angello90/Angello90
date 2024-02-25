@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron : '40 1 * * *'
+    - cron : '42 1 * * *'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
           git config user.email yanny.hassani@universite-paris-saclay.fr
           git add .
           git commit -m "Update README.md"
-          git push origin main
+          git push origin master
         env:
           # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
