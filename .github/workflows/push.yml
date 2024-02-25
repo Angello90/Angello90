@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron : '13 1 * * *'
+    - cron : '30 1 * * *'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -16,13 +16,14 @@ jobs:
       - name: Update
         run: |
           node index.js
-      - name: Add and Commit changes
+      - name: commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          add: .
-          message: Automatic commit
-      - name: Push changes
-        run: |
-          git config --global user.email "yanny.hassani@universite-paris-saclay.fr"
-          git config --global user.name "yhassanige1"
-          git push
+          author_name: yhassanige1
+          author_email: yanny.hassani@universite-paris-saclay.fr
+          force: false
+          signoff: false
+          message: 'Update README.md'
+        env:
+          # This is necessary in order to push a commit to the repo
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
