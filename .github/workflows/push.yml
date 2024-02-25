@@ -16,13 +16,13 @@ jobs:
       - name: Update
         run: |
           node index.js
-      - name: commit changes
+      - name: Add and Commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          author_name: yhassanige1
-          author_email: yanny.hassani@universite-paris-saclay.fr
-          force: false
-          signoff: false
-          message: 'add this hit'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          add: .
+          message: Automatic commit
+      - name: Push changes
+        run: |
+          git config --global user.email "yanny.hassani@universite-paris-saclay.fr"
+          git config --global user.name "yhassanige1"
+          git push
