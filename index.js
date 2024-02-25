@@ -1,6 +1,6 @@
 const fs = require("fs");
 const date = new Date();
-const day = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+const day = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
 
 const generateNewREADME = (path) =>{
     const state = date.getDay() == 6 || date.getDay() == 7 ? '🌴 repos.' : '🏢 travail.';
