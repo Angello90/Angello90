@@ -37,7 +37,7 @@ const generateNewREADME = (path) => {
 
     // const final = `<h1 align='center'>Hi 👋, I'm Angello90</h1>\n<div align='center'>\n\n|<h2 align='center'>Nous sommes le: <u>${date.toLocaleDateString('en-GB')}</u></h2><h2 align='center'>c'est un ${day[date.getDay()]} et je suis ${state}</h2>|\n|---\n</div>`;
 
-    const text = `👋 Hello! Welcome to my GitHub profile. Today we are the ${date.toLocaleDateString('en-GB')}, and I am ${state}`;
+    const text = `👋 Hello! Welcome to my GitHub profile. Today is ${date.toLocaleDateString('en-GB')}, and I am ${state}`;
 
 
 const readme = `
