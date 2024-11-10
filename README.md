@@ -1,3 +1,4 @@
+
 # 💫 About Me:
 
 👋 Hello! Welcome to my GitHub profile. Today we are the 10/11/2024, and I am at: 💤 rest.
@@ -10,3 +11,7 @@
 # 📊 GitHub Stats:
 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Angello90&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
+---
+![](https://media3.giphy.com/media/24FIhRIK2c4uz5mxGS/200.gif)
+
+
