@@ -11,9 +11,3 @@
 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Angello90&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
 
-<<<<<<< HEAD
-=======
-|<h2 align='center'>Nous sommes le: <u>09/11/2024</u></h2><h2 align='center'>c'est un samedi et je suis  au: 🏢 travail.</h2>|
-|---
-</div>
->>>>>>> 17a51f08b9c4609738fb051ed554190c3af2fa9e
