@@ -1,7 +1,7 @@
 
 # 💫 About Me:
 
-👋 Hello! Welcome to my GitHub profile. Today is 11/02/2026, and I am at: 🏢 work.
+👋 Hello! Welcome to my GitHub profile. Today is 12/02/2026, and I am at: 🏢 work.
 
 
 # 💻 Tech Stack:
